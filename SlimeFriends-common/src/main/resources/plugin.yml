@@ -1,0 +1,5 @@
+main: dev.mruniverse.slimefriends.spigot.SlimeFriendsMain
+name: SlimeFriends
+version: ${project.version}
+author: MrUniverse44
+description: Friends plugin

@@ -1,0 +1,4 @@
+name: SlimeFriends
+version: '${project.version}'
+main: dev.mruniverse.slimefriends.bungeecord.SlimeFriendsMain
+description: Friends Plugin

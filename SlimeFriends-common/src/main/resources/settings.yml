@@ -1,0 +1,102 @@
+#   _____ _ _                ______    _                _
+#  / ____| (_)              |  ____|  (_)              | |
+# | (___ | |_ _ __ ___   ___| |__ _ __ _  ___ _ __   __| |___
+#  \___ \| | | '_ ` _ \ / _ \  __| '__| |/ _ \ '_ \ / _` / __|
+#  ____) | | | | | | | |  __/ |  | |  | |  __/ | | | (_| \__ \
+# |_____/|_|_|_| |_| |_|\___|_|  |_|  |_|\___|_| |_|\__,_|___/
+#
+# Created by MrUniverse44
+# Version: 1.0.0-SNAPSHOT
+settings:
+  # Notify in case of a new update of this plugin
+  check-updates: true
+  # Friend Limit System
+  limit:
+    toggle: true
+    value: 5
+  # MySQL is need for friend-storage, the plugin will not work without MySQL
+  mysql:
+    host: "localhost"
+    port: 3306
+    username: "root"
+    password: "password_here"
+    database: "friends"
+    table-prefix: "slimefriends_"
+    custom-jdbc:
+      toggle: true
+      # If you don't know about this, please don't touch
+      value: "jdbc:mysql://[host]:[port]/[db]?autoReconnect=true"
+  hooks:
+    # If you have SlimeChats installed in your server and SlimeGuilds and SlimeParty, toggle this option for a better chat system,
+    SlimeChats: true
+
+#Command List
+commands:
+  main:
+    permission: "slimefriends.use"
+    list:
+      - "friends"
+      - "amigos"
+      - "friend"
+      - "amigo"
+      - "f"
+      - "a"
+  admin:
+    permission: "slimefriends.admin"
+    list:
+      - "slimefriends"
+      - "sfriends"
+      - "sf"
+
+#SubCommand List
+sub-commands:
+  accept:
+    permission: "slimefriends.use.accept"
+    list:
+      - "accept"
+      - "approve"
+      - "aceptar"
+  decline:
+    permission: "slimefriends.use.deny"
+    list:
+      - "denegar"
+      - "decline"
+      - "deny"
+  add:
+    permission: "slimefriends.use.add"
+    list:
+      - "add"
+      - "añadir"
+  remove:
+    permission: "slimefriends.use.remove"
+    list:
+      - "remove"
+      - "eliminar"
+  jump:
+    permission: "slimefriends.use.jump"
+    list:
+      - "go"
+      - "ir"
+      - "visitar"
+      - "seguir"
+      - "follow"
+      - "jump"
+  list:
+    permission: "slimefriends.use.list"
+    list:
+      - "list"
+      - "lista"
+  msg:
+    permission: "slimefriends.use.msg"
+    list:
+      - "msg"
+      - "dm"
+      - "pm"
+      - "tell"
+  broadcast:
+    permission: "slimefriends.use.broadcast"
+    list:
+      - "broadcast"
+      - "bc"
+      - "bmsg"
+      - "chat"
