@@ -11,7 +11,7 @@
     </parent>
 
     <artifactId>SlimeFriends-common</artifactId>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>

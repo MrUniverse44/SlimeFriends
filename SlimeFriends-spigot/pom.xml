@@ -12,7 +12,7 @@
     </parent>
 
     <artifactId>SlimeFriends-spigot</artifactId>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>

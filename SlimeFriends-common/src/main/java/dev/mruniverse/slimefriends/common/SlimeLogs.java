@@ -3,6 +3,7 @@ package dev.mruniverse.slimefriends.common;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("unused")
 public interface SlimeLogs {
 
     String pluginName = "SlimeFriends";
@@ -45,8 +46,15 @@ public interface SlimeLogs {
             List<StackTraceElement> other = new ArrayList<>();
 
             for (StackTraceElement line : exception.getStackTrace()) {
-                if (line.toString().contains(containIdentifier)) {
-                    error("&b (Line: " + line.getLineNumber() + ") " + line.toString().replace("(" + line.getFileName() + ":" + line.getLineNumber() + ")","").replace(hidePackage,""));
+
+                int number = line.getLineNumber();
+
+                String text = line.toString();
+
+                String replace = "(" + line.getFileName() + ":" + number + ")";
+
+                if (text.contains(containIdentifier)) {
+                    error("&b (Line: " + number + ") " + text.replace(replace,"").replace(hidePackage,""));
                 } else {
                     other.add(line);
                 }
